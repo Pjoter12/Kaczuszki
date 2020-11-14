@@ -1,0 +1,10 @@
+C:\Users\dealo\source\repos\Kaczuszki Gra\bin\Debug\Kaczuszki Gra.exe.config
+C:\Users\dealo\source\repos\Kaczuszki Gra\bin\Debug\Kaczuszki Gra.exe
+C:\Users\dealo\source\repos\Kaczuszki Gra\bin\Debug\Kaczuszki Gra.pdb
+C:\Users\dealo\source\repos\Kaczuszki Gra\obj\Debug\Kaczuszki Gra.csprojAssemblyReference.cache
+C:\Users\dealo\source\repos\Kaczuszki Gra\obj\Debug\Kaczuszki_Gra.Form1.resources
+C:\Users\dealo\source\repos\Kaczuszki Gra\obj\Debug\Kaczuszki_Gra.Properties.Resources.resources
+C:\Users\dealo\source\repos\Kaczuszki Gra\obj\Debug\Kaczuszki Gra.csproj.GenerateResource.cache
+C:\Users\dealo\source\repos\Kaczuszki Gra\obj\Debug\Kaczuszki Gra.csproj.CoreCompileInputs.cache
+C:\Users\dealo\source\repos\Kaczuszki Gra\obj\Debug\Kaczuszki Gra.exe
+C:\Users\dealo\source\repos\Kaczuszki Gra\obj\Debug\Kaczuszki Gra.pdb

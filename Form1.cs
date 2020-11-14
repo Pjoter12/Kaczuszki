@@ -16,5 +16,26 @@ namespace Kaczuszki_Gra
         {
             InitializeComponent();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            int[]  granice  = new int [2];
+            Console.WriteLine(panel1.Left);
+            Console.WriteLine(panel1.Right);
+            Console.WriteLine(panel1.Top);
+            Console.WriteLine(panel1.Bottom);
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel1_Click(object sender, EventArgs e)
+        {
+            
+            Console.WriteLine("x: " + Cursor.Position.X + " y: " + Cursor.Position.Y);
+        }
+        
     }
 }
