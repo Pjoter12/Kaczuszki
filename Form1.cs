@@ -12,6 +12,9 @@ namespace Kaczuszki_Gra
 {
     public partial class Form1 : Form
     {
+        int ammo = 6;
+        int ilosc_kaczek =5;
+        
         public Form1()
         {
             InitializeComponent();
@@ -33,9 +36,41 @@ namespace Kaczuszki_Gra
 
         private void panel1_Click(object sender, EventArgs e)
         {
+            if (ammo == 0)
+            {
+                MessageBox.Show("GAME OVER");
+
+            }
+
+            ilosc_kaczek--;
+                ammo--;
+                txtAmmo.Text = "Ammo " + ammo;
             
+            
+                
+                progressBar1.Value= progressBar1.Value /2 ;
+
+            
+
             Console.WriteLine("x: " + Cursor.Position.X + " y: " + Cursor.Position.Y);
+            Console.WriteLine("ZIobro");
         }
-        
+       
+        private void txtAmmo_Click(object sender, EventArgs e)
+        {
+           
+            
+            
+            
+        }
+        private void akcjaKlik(object sender, EventArgs e)
+        {
+
+
+        }
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+
+        }
     }
 }
