@@ -8,3 +8,15 @@ C:\Users\dealo\source\repos\Kaczuszki Gra\obj\Debug\Kaczuszki Gra.csproj.Generat
 C:\Users\dealo\source\repos\Kaczuszki Gra\obj\Debug\Kaczuszki Gra.csproj.CoreCompileInputs.cache
 C:\Users\dealo\source\repos\Kaczuszki Gra\obj\Debug\Kaczuszki Gra.exe
 C:\Users\dealo\source\repos\Kaczuszki Gra\obj\Debug\Kaczuszki Gra.pdb
+C:\Users\4ever\source\repos\Kaczuszki\bin\Debug\Kaczuszki Gra.exe.config
+C:\Users\4ever\source\repos\Kaczuszki\bin\Debug\Kaczuszki Gra.exe
+C:\Users\4ever\source\repos\Kaczuszki\bin\Debug\Kaczuszki Gra.pdb
+C:\Users\4ever\source\repos\Kaczuszki\obj\Debug\Kaczuszki Gra.csprojAssemblyReference.cache
+C:\Users\4ever\source\repos\Kaczuszki\obj\Debug\Kaczuszki_Gra.Form1.resources
+C:\Users\4ever\source\repos\Kaczuszki\obj\Debug\Kaczuszki_Gra.Properties.Resources.resources
+C:\Users\4ever\source\repos\Kaczuszki\obj\Debug\Kaczuszki Gra.csproj.GenerateResource.cache
+C:\Users\4ever\source\repos\Kaczuszki\obj\Debug\Kaczuszki Gra.csproj.CoreCompileInputs.cache
+C:\Users\4ever\source\repos\Kaczuszki\obj\Debug\Kaczuszki Gra.exe
+C:\Users\4ever\source\repos\Kaczuszki\obj\Debug\Kaczuszki Gra.pdb
+C:\Users\4ever\source\repos\Kaczuszki\obj\Debug\Kaczuszki_Gra.Resource.resources
+C:\Users\4ever\source\repos\Kaczuszki\obj\Debug\Kaczuszki_Gra.Resources.GraficzneZasoby.resources
