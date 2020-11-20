@@ -8,17 +8,27 @@ namespace Kaczuszki_Gra.Serwisy
 {
     public class GeneratorSerwis : Interfejsy.IGeneratorSerwis
     {
-        public int LosujWspolrzedne(int zakresDolny, int zakresGorny)
+        private static Random rand;
+        protected static int[] XCords = new int[] { 25, 500 };
+        protected static int[] YCords = new int[] { 10, 100, 190, 280 };
+
+        public GeneratorSerwis()
         {
-            Random rand = new Random();
-            int result = rand.Next(zakresDolny, zakresGorny);
-            rand = null;
-            return result;
+            rand = new Random(); 
         }
 
-        public int LosujWspolrzedne(int zakresDolny, int zakresGorny, int krok)
+        public int LosujWspolrzedne(int zakresDolny, int zakresGorny)
         {
-            return new Random().Next(zakresDolny, zakresGorny)+krok;
+            int result = 0;
+            try
+            {
+                result = rand.Next(zakresDolny, zakresGorny);
+            }
+            catch (System.NullReferenceException nullException)
+            {
+                result = new Random().Next(zakresDolny, zakresGorny);
+            }
+            return result;
         }
     }
 }

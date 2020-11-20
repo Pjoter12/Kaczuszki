@@ -35,6 +35,9 @@ namespace Kaczuszki_Gra.Modele
             obrazKaczki.BackColor = System.Drawing.Color.DodgerBlue;
             obrazKaczki.Top = Wspolrzedne.Y;
             obrazKaczki.Left = Wspolrzedne.X;
+
+            obrazKaczki.Click += new System.EventHandler(Zestrzelenie);
+
             return obrazKaczki;
         }
         
@@ -44,6 +47,13 @@ namespace Kaczuszki_Gra.Modele
             timerKaczki.Interval = czas;
             return timerKaczki;
         }
+
+
+        private void Zestrzelenie(Object obj, EventArgs eventArgs)
+        {
+            this.Obraz.Parent = null;
+        }
+
 
         private void Lot(object sender, EventArgs eventArgs)
         {

@@ -15,17 +15,19 @@ namespace Kaczuszki_Gra
         int ammo = 6;
         int ilosc_kaczek = 5;
         int ilosc_kaczekNaScenie = 5;
-        Modele.Kaczuszka[] kaczuszki = new Modele.Kaczuszka[5];
-
+        Modele.Kaczuszka[] kaczuszki = new Modele.Kaczuszka[4];
+        Queue<Modele.Kaczuszka> kaczuszkiKolejka = new Queue<Modele.Kaczuszka>();
         public Form1()
         {
             InitializeComponent();
-            kaczuszki = new Serwisy.GeneratorKaczekSerwis(5).GenerujKaczuszki();
+            kaczuszki = new Serwisy.GeneratorKaczekSerwis(4).GenerujKaczuszki();
             foreach (Kaczuszki_Gra.Modele.Kaczuszka kaczuszka in kaczuszki)
             {
                 Console.WriteLine(kaczuszka);
-                kaczuszka.Obraz.Parent = panel1;
+                //kaczuszka.Obraz.Parent = panel1;
+                kaczuszkiKolejka.Enqueue(kaczuszka);
             }
+            glownyTimer.Start();
 
         }
 
@@ -47,6 +49,7 @@ namespace Kaczuszki_Gra
 
         private void panel1_Click(object sender, EventArgs e)
         {
+            WstawKaczke();
             if (ammo == 0)
             {
                 MessageBox.Show("GAME OVER");
@@ -66,7 +69,16 @@ namespace Kaczuszki_Gra
             Console.WriteLine("x: " + Cursor.Position.X + " y: " + Cursor.Position.Y);
             Console.WriteLine("ZIobro");
         }
-       
+
+        private void WstawKaczke()
+        {
+            if (kaczuszkiKolejka.Count > 0)
+            {
+                Modele.Kaczuszka kaczuszka = kaczuszkiKolejka.Dequeue();
+                kaczuszka.Obraz.Parent = panel1;
+            }
+        }
+
         private void txtAmmo_Click(object sender, EventArgs e)
         {
            
