@@ -35,9 +35,7 @@ namespace Kaczuszki_Gra.Modele
             obrazKaczki.BackColor = System.Drawing.Color.DodgerBlue;
             obrazKaczki.Top = Wspolrzedne.Y;
             obrazKaczki.Left = Wspolrzedne.X;
-
-            obrazKaczki.Click += new System.EventHandler(Zestrzelenie);
-
+            obrazKaczki.Click += new System.EventHandler(UtrataZycia);
             return obrazKaczki;
         }
         
@@ -49,7 +47,7 @@ namespace Kaczuszki_Gra.Modele
         }
 
 
-        private void Zestrzelenie(Object obj, EventArgs eventArgs)
+        public void UtrataZycia(Object obj, EventArgs eventArgs)
         {
             this.Obraz.Parent = null;
         }
