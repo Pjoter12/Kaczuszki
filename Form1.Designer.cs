@@ -66,7 +66,7 @@ namespace Kaczuszki_Gra
             this.txtDucks.Location = new System.Drawing.Point(376, 381);
             this.txtDucks.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.txtDucks.Name = "txtDucks";
-            this.txtDucks.Size = new System.Drawing.Size(67, 24);
+            this.txtDucks.Size = new System.Drawing.Size(85, 29);
             this.txtDucks.TabIndex = 2;
             this.txtDucks.Text = "Ducks:";
             // 
@@ -77,7 +77,7 @@ namespace Kaczuszki_Gra
             this.txtKills.Location = new System.Drawing.Point(253, 381);
             this.txtKills.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.txtKills.Name = "txtKills";
-            this.txtKills.Size = new System.Drawing.Size(58, 24);
+            this.txtKills.Size = new System.Drawing.Size(78, 29);
             this.txtKills.TabIndex = 1;
             this.txtKills.Text = "Kills 0";
             // 
@@ -88,12 +88,13 @@ namespace Kaczuszki_Gra
             this.txtAmmo.Location = new System.Drawing.Point(63, 381);
             this.txtAmmo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.txtAmmo.Name = "txtAmmo";
-            this.txtAmmo.Size = new System.Drawing.Size(81, 24);
+            this.txtAmmo.Size = new System.Drawing.Size(101, 29);
             this.txtAmmo.TabIndex = 0;
             this.txtAmmo.Text = "Ammo 0";
             // 
             // glownyTimer
             // 
+            this.glownyTimer.Enabled = true;
             this.glownyTimer.Interval = 2000;
             this.glownyTimer.Tag = "lotKaczek";
             this.glownyTimer.Tick += new System.EventHandler(this.glownyTimer_Tick);

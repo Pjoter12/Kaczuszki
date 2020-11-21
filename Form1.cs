@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Kaczuszki_Gra.Modele;
 
 namespace Kaczuszki_Gra
 {
     public partial class Form1 : Form
     {
+        
         private static int ammo = 6;
         int ilosc_kaczek = 5;
         private static int licznikZabojstw = 0;
@@ -58,7 +60,7 @@ namespace Kaczuszki_Gra
         }
 
         private void WstawKaczke()
-        {
+        {   
             if (kaczuszkiKolejka.Count > 0)
             {
                 Modele.Kaczuszka kaczuszka = kaczuszkiKolejka.Dequeue();
@@ -83,6 +85,8 @@ namespace Kaczuszki_Gra
         private void glownyTimer_Tick(object sender, EventArgs e)
         {
 
+            WstawKaczke();
+            
         }
     }
 }

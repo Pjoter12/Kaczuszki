@@ -11,7 +11,7 @@ namespace Kaczuszki_Gra.Modele
         public string KierunekLotu { get; set; }
         public System.Drawing.Point Wspolrzedne { get; set; }
         public System.Windows.Forms.PictureBox Obraz { get; set; }
-        public System.Windows.Forms.Timer TimerLotu { get; set; }
+        public  System.Windows.Forms.Timer TimerLotu { get; set; }
 
         public Kaczuszka(string kierunek, System.Drawing.Point wspolrzedne, int rodzaj)
         {
@@ -19,8 +19,10 @@ namespace Kaczuszki_Gra.Modele
             Wspolrzedne = wspolrzedne;
             KierunekLotu = kierunek;
             Obraz = UstawObraz();
-            TimerLotu = UstawTimer(2000);
-            TimerLotu.Start();
+            TimerLotu = UstawTimer(1000);
+            
+            
+            
         }
 
         private System.Windows.Forms.PictureBox UstawObraz()
@@ -41,11 +43,31 @@ namespace Kaczuszki_Gra.Modele
         
         private System.Windows.Forms.Timer UstawTimer(int czas)
         {
+
+            
             System.Windows.Forms.Timer timerKaczki = new System.Windows.Forms.Timer();
+            timerKaczki.Tick += new System.EventHandler(ZmienPolozenie);
             timerKaczki.Interval = czas;
+            timerKaczki.Start();
             return timerKaczki;
         }
+        private void ZmienPolozenie(object sender, EventArgs eventArgs)
+        {
+            if (Obraz.Left == 624)
+                KierunekLotu = "lewo";
 
+            if (Obraz.Left == 50)
+                KierunekLotu = "prawo";
+
+            if (KierunekLotu == "lewo")
+                Obraz.Left -= 40;
+            else
+                Obraz.Left += 40;
+           
+            
+            
+            
+        }
 
         public void UtrataZycia(Object obj, EventArgs eventArgs)
         {
@@ -53,11 +75,7 @@ namespace Kaczuszki_Gra.Modele
         }
 
 
-        private void Lot(object sender, EventArgs eventArgs)
-        {
-
-        }
-
+       
         public override string ToString()
         {
             return $"Kierunek Kaczki {this.KierunekLotu} , pozycja X : {this.Wspolrzedne.X}, pozycja Y:{this.Wspolrzedne.Y}";
