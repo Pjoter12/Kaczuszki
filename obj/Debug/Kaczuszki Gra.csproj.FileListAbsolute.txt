@@ -20,3 +20,5 @@ C:\Users\4ever\source\repos\Kaczuszki\obj\Debug\Kaczuszki Gra.exe
 C:\Users\4ever\source\repos\Kaczuszki\obj\Debug\Kaczuszki Gra.pdb
 C:\Users\4ever\source\repos\Kaczuszki\obj\Debug\Kaczuszki_Gra.Resource.resources
 C:\Users\4ever\source\repos\Kaczuszki\obj\Debug\Kaczuszki_Gra.Resources.GraficzneZasoby.resources
+C:\Users\dealo\source\repos\Kaczuszki Gra\obj\Debug\Kaczuszki_Gra.Resource.resources
+C:\Users\dealo\source\repos\Kaczuszki Gra\obj\Debug\Kaczuszki_Gra.Resources.GraficzneZasoby.resources

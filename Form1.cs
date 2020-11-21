@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Kaczuszki_Gra.Modele;
 
 namespace Kaczuszki_Gra
 {
     public partial class Form1 : Form
     {
+        
         private static int ammo = 6;
         int ilosc_kaczek = 5;
         private static int licznikZabojstw = 0;
@@ -44,10 +46,47 @@ namespace Kaczuszki_Gra
 
         private void panel1_Click(object sender, EventArgs e)
         {
-            
+            WstawKaczke();
+            if (ammo == 0)
+            {
+                MessageBox.Show("GAME OVER");
+                return;
+            }
+
+            ammo--;
+            txtAmmo.Text = "Ammo " + ammo;
+
             Console.WriteLine("x: " + Cursor.Position.X + " y: " + Cursor.Position.Y);
-            Console.WriteLine("ZIobro");
         }
-        
+
+        private void WstawKaczke()
+        {   
+            if (kaczuszkiKolejka.Count > 0)
+            {
+                Modele.Kaczuszka kaczuszka = kaczuszkiKolejka.Dequeue();
+                kaczuszka.Obraz.Parent = panel1;
+            }
+        }
+
+        private void ZestrzelenieKaczki(Object obj, EventArgs eventArgs )
+        {
+            if (ammo == 0)
+            {
+                MessageBox.Show("GAME OVER");
+                return;
+            }
+            Console.WriteLine("PUFF");
+            ammo--;
+            txtAmmo.Text = "Ammo " + ammo;
+            txtKills.Text = $" Kills: {++licznikZabojstw}";
+            progressBar1.Value = progressBar1.Value / 2;
+        }
+
+        private void glownyTimer_Tick(object sender, EventArgs e)
+        {
+
+            WstawKaczke();
+            
+        }
     }
 }
